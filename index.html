@@ -386,7 +386,28 @@
   .gallery-item .gallery-photo{ aspect-ratio:4/3; overflow:hidden; border-radius:6px; background:var(--ink-2); }
   .gallery-item img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s cubic-bezier(.2,.8,.2,1); }
   .gallery-item:hover img{ transform:scale(1.06); }
-  .gallery-item figcaption{ margin-top:12px; font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:.04em; opacity:.6; }
+  .gallery-item figcaption{
+    margin-top:14px;
+    font-family:'Fraunces', serif;
+    font-weight:450;
+    font-style:italic;
+    font-size:16px;
+    letter-spacing:.01em;
+    color:#FFFFFF;
+    opacity:.92;
+    position:relative;
+    display:inline-block;
+    padding-bottom:6px;
+    transition:opacity .3s ease;
+  }
+  .gallery-item figcaption::after{
+    content:'';
+    position:absolute; left:0; bottom:0; height:1px; width:26px;
+    background:var(--brass);
+    transition:width .35s cubic-bezier(.2,.7,.3,1);
+  }
+  .gallery-item:hover figcaption{ opacity:1; }
+  .gallery-item:hover figcaption::after{ width:100%; }
 
   /* ---------------- RESPONSIVE ---------------- */
   /* Laptop / smaller desktops */
