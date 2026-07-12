@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 export const metadata: Metadata = {
   metadataBase: new URL("https://radissondaynightspa.com"),
 
@@ -61,7 +61,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+  <LocalBusinessSchema />
+  {children}
+</body>
     </html>
   );
 }
